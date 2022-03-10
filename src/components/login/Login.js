@@ -1,6 +1,7 @@
 import {useState} from 'react'
 import axios from 'axios'
 import { NavLink,useNavigate } from "react-router-dom";
+import '../../App.css'
 
 function Login(){
 
@@ -27,8 +28,12 @@ function Login(){
 
     
     return(
-        <div>
+        
+        <div className="container">
+            <h1>Login</h1>
+            <p>Username</p>
             <input type="text" placeholder="Username" onChange={e => setUsername(e.target.value)} />
+            <p>Password</p>
             <input type="password" placeholder="Password" onChange={e => setPassword(e.target.value)} />
             <p id='warning'></p>
             <button onClick={ () => post('http://localhost:8000/api/v1/login')}>Login</button>

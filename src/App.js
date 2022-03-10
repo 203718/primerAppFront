@@ -11,14 +11,14 @@ function App() {
           <Route path="/register" element={<Register/>}>
           </Route>
 
-          <Route path='/login' element={<Login/>}>
+          <Route path='*' element={<Login/>}>
           </Route>
 
           <Route path='/perfil' element={<Profile/>}>
           </Route>
 
-          <Route path='*' element={<div><h1>Not Found Page</h1></div>}>
-          </Route>
+          {/*<Route path='*' element={<div><h1>Not Found Page</h1></div>}>
+          </Route>*/}
         </Routes>
       </BrowserRouter>
     </div>

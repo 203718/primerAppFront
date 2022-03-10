@@ -1,6 +1,7 @@
 import {useState} from 'react'
 import axios from 'axios'
 import { NavLink, useNavigate } from 'react-router-dom';
+import '../../App.css'
 
 function Register(){
     const navigate = useNavigate();
@@ -23,7 +24,7 @@ function Register(){
     const [email, setEmail] =useState('');
     const [password2,setPassword2] = useState('');
     return(
-        <div>
+        <div className='container'> 
             <input type="text" placeholder="first name" onChange={e => setFirst(e.target.value)} />
             <input type="text" placeholder="last name" onChange={e => setLast(e.target.value)} />
             <input type="text" placeholder="email" onChange={e => setEmail(e.target.value)} />
@@ -31,7 +32,7 @@ function Register(){
             <input type="password" placeholder="Password" onChange={e => setPassword(e.target.value)} />
             <input type="password" placeholder="password 2" onChange={e => setPassword2(e.target.value)} />
             <button onClick={ () => post('http://localhost:8000/api/v1/register/usuario')}>Register</button>
-            <p>Ya tienes una cuenta? <NavLink to='/login'>Inicia Sesion</NavLink></p>
+            <p>Ya tienes una cuenta? <NavLink to='/'>Inicia Sesion</NavLink></p>
         </div>
     )
     

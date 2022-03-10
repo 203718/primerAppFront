@@ -32,9 +32,9 @@ function Login(){
         <div className="container">
             <h1>Login</h1>
             <p>Username</p>
-            <input type="text" placeholder="Username" onChange={e => setUsername(e.target.value)} />
+            <input className="inputUser" type="text" placeholder="Username" onChange={e => setUsername(e.target.value)} />
             <p>Password</p>
-            <input type="password" placeholder="Password" onChange={e => setPassword(e.target.value)} />
+            <input className="InputLogin" type="password" placeholder="Password" onChange={e => setPassword(e.target.value)} />
             <p id='warning'></p>
             <button onClick={ () => post('http://localhost:8000/api/v1/login')}>Login</button>
             <p>No tienes una cuenta? <NavLink to='/register'>Crea una</NavLink></p>

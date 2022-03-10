@@ -126,13 +126,13 @@ function Profile(){
 
     const cerrar_sesion = () =>{
         localStorage.clear();
-        navigate("/login");
+        navigate("/");
     }
 
     return(
-        <div>
+        <div className="container2">
             <div>
-                <img alt="Imagen" src="" id="imagenPerfil"></img>
+                <img alt="Imagen" height="20%" width="20%" src="" id="imagenPerfil"></img>
                 <div id="vista"></div>
                 <input accept="image/*" type="file" id="imagenInput"></input>
                 <button onClick={ ()=>{ post_imagen("http://localhost:8000/api/v1/perfil/imagen")}}>Cambiar Imagen</button>
@@ -141,7 +141,7 @@ function Profile(){
             <div>
                 <p>First Name: </p><input id="firstname" ></input>
                 <p>Last Name: </p><input id="lastname"></input>
-                <p>Userame: </p><input id="username"></input>
+                <p>Username: </p><input id="username"></input>
                 <p>Email: </p><input id="email"></input>
                 
             </div>
